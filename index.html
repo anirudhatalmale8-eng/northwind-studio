@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Northwind Studio</title>
+<meta name="description" content="Northwind Studio — a small studio working in light, landscape and quiet detail.">
+<link rel="preload" as="image" href="assets/hero.jpg">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="masthead">
+    <a class="wordmark" href="#top">Northwind&nbsp;Studio</a>
+    <nav class="masthead__nav">
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!--
+    Hero.
+    The photograph is served as the original file the client supplied:
+    assets/hero.jpg — 4000x3000, byte-for-byte unmodified.
+    It is laid out at its natural aspect ratio (width:100%; height:auto),
+    so the browser never crops it. No object-fit:cover, no srcset,
+    no build-step resizing or re-encoding anywhere in this project.
+  -->
+  <figure class="hero" id="top">
+    <img
+      class="hero__img"
+      src="assets/hero.jpg"
+      width="4000" height="3000"
+      alt="Northwind Studio hero photograph: a broad field of green under a wide sky of scattered cloud."
+      fetchpriority="high"
+      decoding="async">
+  </figure>
+
+  <main>
+
+    <section class="about" id="about">
+      <p class="eyebrow">About</p>
+      <div class="about__body">
+        <h1 class="lede">
+          Northwind Studio is a small practice working in light, landscape
+          and quiet detail.
+        </h1>
+        <div class="about__cols">
+          <p>
+            We make photographs and printed work for people who would rather
+            have one considered image than a dozen forgettable ones. Every
+            commission starts with a conversation and a walk — usually in that
+            order — and ends with files and prints we are happy to put our
+            name to.
+          </p>
+          <p>
+            The studio works across editorial, architectural and personal
+            commissions, and takes on a deliberately small number of projects
+            each year. If that sounds like the right fit for what you have in
+            mind, we would like to hear from you.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <p class="eyebrow">Contact</p>
+      <div class="contact__body">
+        <p class="contact__intro">
+          For commissions, print enquiries and anything else&nbsp;—
+        </p>
+        <a class="contact__email" href="mailto:hello@northwindstudio.com">hello@northwindstudio.com</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <span>&copy; <span id="year">2026</span> Northwind Studio</span>
+    <span class="footer__credit">All photography is the property of the studio.</span>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
